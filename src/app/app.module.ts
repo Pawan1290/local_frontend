@@ -9,6 +9,11 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { Auth1Service } from './services/auth1.service';
+import { TokenService } from './services/token.service';
+import { AfterLoginService } from './services/after-login.service';
+import { BeforeLoginService } from './services/before-login.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService,TokenService, Auth1Service, AfterLoginService,BeforeLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
